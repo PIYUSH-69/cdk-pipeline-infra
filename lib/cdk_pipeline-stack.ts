@@ -13,7 +13,7 @@ export class ServicesStack extends cdk.Stack {
 
     
 const lambda = new aws_lambda.Function(this, "demoLambda", {
-  functionName: `lambda_func_ ${props?.stageName}`,
+  functionName: `lambda_func_${props?.stageName}`,
   handler: "index.lambda_handler",
   runtime: aws_lambda.Runtime.PYTHON_3_10,
   code: aws_lambda.Code.fromInline(`
