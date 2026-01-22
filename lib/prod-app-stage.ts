@@ -6,6 +6,11 @@ export class ProdAppStage extends cdk.Stage {
   constructor(scope: Construct, id: string, props?: cdk.StageProps) {
     super(scope, id, props);
 
-    new ServicesStack(this, 'ProdStack');
+        const stageName = id;  // "test" or "prod"
+
+    new ServicesStack(this, `ServiceStack-${stageName}`, {
+      stageName : stageName,
+      env : props?.env
+    });
   }
 }

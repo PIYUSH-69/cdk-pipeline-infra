@@ -3,8 +3,12 @@ import * as cdk from 'aws-cdk-lib/core';
 import { Construct } from 'constructs';
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 
+export interface ServicesStackProps extends cdk.StackProps {
+  stageName: string;
+}
+
 export class ServicesStack extends cdk.Stack {
-  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+  constructor(scope: Construct, id: string, props?: ServicesStackProps) {
     super(scope, id, props);
 
     
