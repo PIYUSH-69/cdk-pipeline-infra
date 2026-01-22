@@ -20,7 +20,7 @@ const lambda = new aws_lambda.Function(this, "demoLambda", {
 def lambda_handler(event, context):
     return {
         "statusCode": 200,
-        "body": "Hello from inline Lambda!"
+        "body": "Hello from inline Lambda -test2!"
     }
 `)
 });
