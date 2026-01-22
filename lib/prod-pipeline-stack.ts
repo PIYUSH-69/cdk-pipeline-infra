@@ -13,7 +13,7 @@ export class ProdPipelineStack extends cdk.Stack {
       synth: new ShellStep('Synth', {
         input: CodePipelineSource.connection(
           'PIYUSH-69/cdk-pipeline-infra',   // <-- PUBLIC REPO
-          'release'   ,{
+          'prod'   ,{
             connectionArn : 'arn:aws:codeconnections:ap-south-1:706877673330:connection/e3a0b34f-39dc-4a14-9c9a-757a643f3a3b'
           }                           // <-- PROD uses RELEASE
         ),

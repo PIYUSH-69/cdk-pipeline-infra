@@ -7,8 +7,6 @@ export class ServicesStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-
-
     
 const lambda = new aws_lambda.Function(this, "demoLambda", {
   functionName: "demo_lambda_func",

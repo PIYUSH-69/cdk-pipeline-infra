@@ -15,7 +15,7 @@ export class TestPipelineStack extends cdk.Stack {
 
         input: CodePipelineSource.connection(
           'PIYUSH-69/cdk-pipeline-infra',   
-          'main'   ,{
+          'test'   ,{
             connectionArn : 'arn:aws:codeconnections:ap-south-1:706877673330:connection/e3a0b34f-39dc-4a14-9c9a-757a643f3a3b'
           }                           
         ),
