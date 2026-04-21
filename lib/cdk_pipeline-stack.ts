@@ -11,8 +11,6 @@ export class ServicesStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: ServicesStackProps) {
     super(scope, id, props);
 
-
-
         const bucket = new aws_s3.Bucket(this, 'AppDataBucket', {
       versioned: true,
       blockPublicAccess: aws_s3.BlockPublicAccess.BLOCK_ALL,
